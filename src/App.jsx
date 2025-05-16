@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import NonVeg from './NonVeg';
-// import Veg from './veg';
+import Veg from './veg';
 import Signing from './Signing';
 import Order from './Order';
 import Home from './Home';
 import Cart from './Cart';
-import Chocolate from './chocolate';
+
+
 import Contactus from './Contactus';
 import Aboutus from './Aboutus';
 
@@ -15,8 +16,7 @@ import './vegstyle.css';
 import { useSelector } from 'react-redux';
 import './Cart';
 import Pagenotfound from './Pagenotfound';
-import Veg from './veg';
-
+import Chocolate from './Chocolate';
 
 function App() {
 let CartObject = useSelector(globalState => globalState.cart);
@@ -38,7 +38,7 @@ let CartObject = useSelector(globalState => globalState.cart);
   <Link to="/order" className="nav-button">Order items🛒</Link>
   <Link to="/Fruits" className="nav-button">Fruits🍉</Link>
   <Link to="/cart" className="nav-button">🛒 Cart({totalcartcount})</Link>
-  <Link to="/chocolate" className="nav-button">Chocolate🍫</Link>
+  <Link to="/Chocolate" className="nav-button">Chocolate🍫</Link>
   <Link to="/contactus" className="nav-button">Contact Us📞</Link>
   <Link to="/aboutus" className="nav-button">About Us ℹ️ </Link>
 </nav>
@@ -46,10 +46,10 @@ let CartObject = useSelector(globalState => globalState.cart);
       <Routes>
       <Route path="/" element={<Home/>}/>
         <Route path="/nonveg" element={<NonVeg />} />
-        <Route path="/veg" element={<Veg/>} />
+        <Route path="/veg" element={<Veg />} />
         <Route path="/Fruits" element={<Fruits/>}/>
         <Route path="/Cart" element={<Cart/>}/>
-        <Route path="/chocolate" element={<Chocolate/>}/>
+        <Route path="/Chocolate" element={<Chocolate/>}/>
         <Route path="/order" element={<Order/>}/>
         <Route path="/contactus" element={<Contactus/>}/>
         <Route path="/aboutus" element={<Aboutus/>}/>
