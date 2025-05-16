@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import NonVeg from './NonVeg';
-import Veg from './veg';
+// import Veg from './veg';
 import Signing from './Signing';
 import Order from './Order';
 import Home from './Home';
@@ -15,6 +15,8 @@ import './vegstyle.css';
 import { useSelector } from 'react-redux';
 import './Cart';
 import Pagenotfound from './Pagenotfound';
+import Veg from './veg';
+
 
 function App() {
 let CartObject = useSelector(globalState => globalState.cart);
@@ -44,7 +46,7 @@ let CartObject = useSelector(globalState => globalState.cart);
       <Routes>
       <Route path="/" element={<Home/>}/>
         <Route path="/nonveg" element={<NonVeg />} />
-        <Route path="/veg" element={<Veg />} />
+        <Route path="/veg" element={<Veg/>} />
         <Route path="/Fruits" element={<Fruits/>}/>
         <Route path="/Cart" element={<Cart/>}/>
         <Route path="/chocolate" element={<Chocolate/>}/>
