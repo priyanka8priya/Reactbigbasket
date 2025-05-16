@@ -1,0 +1,27 @@
+/* Navigation container */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    background-color:darkorchid;
+  }
+  
+  /* Button-style links */
+  .nav-button {
+    background-color:whitesmoke;
+    color: darkorchid;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .nav-button:hover {
+    background-color: white;
+  }
+  

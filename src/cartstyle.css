@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h3, h4, h5 {
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Cart Page Wrapper */
+.cart-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.cart-page-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cart Items */
+.cart-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item-row img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-name {
+  flex: 1;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.cart-item-price {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-controls button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quantity-controls button:hover {
+  background-color: #0056b3;
+}
+
+.remove-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #c82333;
+}
+
+/* Discount & Coupon */
+.discount-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.discount-buttons button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.discount-buttons button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.discount-buttons button:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.coupon-section {
+  display: flex;
+  gap: 10px;
+}
+
+.coupon-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+.apply-coupon-btn {
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.apply-coupon-btn:hover {
+  background-color: #e0a800;
+}
+
+/* Cart Summary */
+.cart-summary {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-summary h5 {
+  margin: 5px 0;
+}
+
+.cart-summary p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+.cart-summary strong {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Email Section */
+.email-section {
+  margin-top: 20px;
+}
+
+.email-section input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Payment Options */
+.payment-options {
+  margin-top: 20px;
+}
+
+.payment-options button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.payment-options button:hover {
+  background-color: #0056b3;
+}
+
+.card-payment-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-payment-box input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.complete-purchase-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.complete-purchase-btn:hover {
+  background-color: #218838;
+}
+
+/* QR Code Section */
+.qr-code-section {
+  text-align: center;
+}
+
+.qr-code-section p {
+  margin: 10px 0;
+}
+
+.qr-code-section button {
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
