@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast, ToastContainer } from 'react-toastify'; // ✅ Toastify
 import 'react-toastify/dist/ReactToastify.css'; // ✅ Toastify styles
-import './vegstyle.css';
+import './chocolate.css';
+
 import { Addtocart } from './store';
 
 function Chocolate() {

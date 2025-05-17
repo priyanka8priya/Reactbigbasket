@@ -1,116 +1,246 @@
-/* VegStyles.css - Creative, modern design for Veg.js */
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px 20px;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #2e7d32;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 2px #b2dfdb;
-  }
-  
-  .import-button-wrapper {
-    text-align: right;
-    margin-bottom: 20px;
-  }
-  
-  .import-btn {
-    background: linear-gradient(to right, #66bb6a, #43a047);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 10px rgba(67, 160, 71, 0.3);
-  }
-  
-  .import-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(18, 158, 25, 0.4);
-  }
-  
-  .card-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-  }
-  
-  .card {
-    background-color: #ffffff;
-    width: 240px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(93, 35, 186, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 28px rgba(3, 77, 19, 0.15);
-  }
-  
-  .card img {
-  width: 100%;
-  height: 160px;
-  object-fit: contain;
-  object-position: center;
-  border-radius: 12px 12px 0 0;
-
-  /* Clean subtle border and background for better visual balance */
- 
-  background-color: #ffffff;        /* clean white for contrast */
-  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  margin: 0;
+  padding: 0;
 }
 
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 20px;
+}
 
-  .card-content {
-    padding: 16px;
-    text-align: center;
-  }
-  
-  .card h3 {
-    font-size: 20px;
-    margin: 10px 0 6px;
-    color: darkred;
-  }
-  
-  .card p {
-    font-size: 16px;
-    color: black;
-    margin: 0;
-  }
-  
-  .card button {
-    margin-top: 12px;
-    background-color:darkmagenta;
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-  }
-  
-  .card button:hover {
-    background-color:#2e7d32;
-    transform: scale(1.1);
-  }
+h1 {
+  text-align: center;
+  color: #2e7d32;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px #b2dfdb;
+}
+
+.import-button-wrapper {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.import-btn {
+  background: linear-gradient(to right, #66bb6a, #43a047);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(67, 160, 71, 0.3);
+}
+
+.import-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(18, 158, 25, 0.4);
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+/* Smaller, neat cards */
+.card {
+  background-color: #ffffff;
+  width: 180px;  /* smaller width */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(93, 35, 186, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(3, 77, 19, 0.15);
+}
+
+/* Image wrapper ensures uniform size and cropping */
+.card-image-wrapper {
+  width: 160px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+}
+
+.card img {
+  width: 100%;       /* fill wrapper width */
+  height: 100%;      /* fill wrapper height */
+  object-fit: cover; /* crop image to fill */
+  object-position: center;
+  display: block;
+}
+
+.card-content {
+  text-align: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 8px 0 4px;
+  color: darkred;
+}
+
+.card p {
+  font-size: 14px;
+  color: black;
+  margin: 0;
+}
+
+/* Neat Add to Cart button */
+.card button {
+  margin-top: 14px;
+  background-color: darkmagenta;
+  color: white;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.card button:hover {
+  background-color: #2e7d32;
+  transform: scale(1.1);
+}
+/* VegStyles.css - Small, neat card design with equal image sizes */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2e7d32;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px #b2dfdb;
+}
+
+.import-button-wrapper {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.import-btn {
+  background: linear-gradient(to right, #66bb6a, #43a047);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(67, 160, 71, 0.3);
+}
+
+.import-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(18, 158, 25, 0.4);
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+/* Card size */
+.card {
+  background-color: #ffffff;
+  width: 200px;  /* uniform smaller width */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(93, 35, 186, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(3, 77, 19, 0.15);
+}
+
+/* Equal size image */
+.card img {
+  width: 180px;   /* fixed width */
+  height: 140px;  /* fixed height */
+  object-fit: cover; /* crop but maintain aspect ratio */
+  object-position: center;
+  border-radius: 12px 12px 0 0;
+  background-color: #ffffff;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  text-align: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 8px 0 4px;
+  color: darkred;
+}
+
+.card p {
+  font-size: 14px;
+  color: black;
+  margin: 0;
+}
+
+/* Add to Cart button */
+.card button {
+  margin-top: 14px;
+  background-color: darkmagenta;
+  color: white;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.card button:hover {
+  background-color: #2e7d32;
+  transform: scale(1.1);
+}

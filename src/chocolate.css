@@ -1,0 +1,146 @@
+/* chocolate.css - Clean, uniform card UI with pagination and filter styling */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2e7d32;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px #b2dfdb;
+}
+
+/* Price Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.filters label {
+  font-size: 14px;
+  background-color: #e0f2f1;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filters input[type='checkbox'] {
+  margin-right: 6px;
+}
+
+.filters label:hover {
+  background-color: #a5d6a7;
+}
+
+/* Card Grid Layout */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+/* Individual Card */
+.card {
+  background-color: #fff;
+  width: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(67, 160, 71, 0.2);
+}
+
+/* Card Image (Equal size for all) */
+.card img {
+  width: 180px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center;
+  background-color: #ffffff;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Card Content */
+.card-content h3 {
+  font-size: 16px;
+  color: darkred;
+  margin: 8px 0 4px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: black;
+  margin: 0;
+}
+
+/* Add to Cart Button */
+.card-content button {
+  margin-top: 10px;
+  background-color: darkmagenta;
+  color: white;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 60px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.card-content button:hover {
+  background-color: #2e7d32;
+  transform: scale(1.1);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: 1px solid #66bb6a;
+  background-color: white;
+  color: #2e7d32;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #66bb6a;
+  color: white;
+}
+
+.pagination .active {
+  background-color: #2e7d32;
+  color: white;
+}

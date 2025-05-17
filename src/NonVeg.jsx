@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast, ToastContainer } from "react-toastify"; // ✅ import toast
 import "react-toastify/dist/ReactToastify.css"; // ✅ import CSS
-import "./vegstyle.css";
+import './NonVeg.css';
+
 import { Addtocart } from "./store";
 
 function NonVeg() {

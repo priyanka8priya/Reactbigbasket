@@ -1,45 +1,46 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
-const savedcart=localStorage.getItem("cart");
-const localStoragecart=savedcart?JSON.parse(savedcart):[];
-// Create the products slice
+const savedcart = localStorage.getItem("cart");
+const localStoragecart = savedcart ? JSON.parse(savedcart) : [];
+
+// Product slice
 const productsSlice = createSlice({
   name: 'products',
   initialState: {
     veg: [
-      { name: 'Tomato', price: 200.5, image:'/image/Tomato.jpg' },
-      { name: 'Potato', price: 100.89, image:'/image/potato.jpg' },
-      { name: 'Carrot', price: 50.75, image:'/image/carrots.jpg' },
-      { name: 'Cauliflower', price: 120.3, image:'/image/cauliflower.jpg' },
-      { name: 'Radish', price: 156.2, image:'/image/raddish.jpg' },
-      { name: 'Onion', price: 189.15, image:'/image/Onion.jpg' },
-      { name: 'Brinjal', price: 125.4, image:'/image/brinjal.jpg' },
-      { name: 'Cucumber', price: 346.1, image:'/image/cucumber.jpg' },
-      { name: 'Capsicum', price: 134.1, image:'/image/capcicum.jpg' },
-      { name: 'Drumstick', price: 167.1, image:'/image/drumstick.jpg' },
-      { name: 'LadiesFingure', price: 145.1, image:'/image/lady.jpg' },
-      { name: 'Sembeans', price: 150.1, image:'/image/sembeans.jpg' },
-      { name: 'Beans', price: 100.1, image:'/image/beans.jpg' },
-      { name: 'Beatroot', price: 70.1, image:'/image/beatroot.jpg' },
-      { name: 'Cabbage', price: 90.1, image:'/image/cabbage.jpg' },
-      { name: 'Greenchilli', price: 80.1, image:'/image/greechill.jpg' },
-      { name: 'Sweetcorn', price: 150.1, image:'/image/sweetcorn.jpg' },
-      { name: 'Garlic', price: 100.1, image:'/image/garlic.jpg' },
-      { name: 'Spinach', price: 70.1, image:'/image/spinach.jpg' },
-      { name: 'Coriander', price: 80.1, image:'/image/coriander.jpg' },
+      { name: 'Brinjal', price: 125.4, image: '/image/brinjal.jpg' },
+      { name: 'Potato', price: 100.89, image: '/image/potato.jpg' },
+      { name: 'Carrot', price: 50.75, image: '/image/carrots.jpg' },
+      { name: 'Cauliflower', price: 120.3, image: '/image/cauliflower.jpg' },
+      { name: 'Radish', price: 156.2, image: '/image/raddish.jpg' },
+      { name: 'Onion', price: 189.15, image: '/image/Onion.jpg' },
+      { name: 'Tomato', price: 200.5, image: '/image/Tomato.jpg' },
+      { name: 'Cucumber', price: 346.1, image: '/image/cucumber.jpg' },
+      { name: 'Capsicum', price: 134.1, image: '/image/capcicum.jpg' },
+      { name: 'Drumstick', price: 167.1, image: '/image/drumstick.jpg' },
+      { name: 'LadiesFingure', price: 145.1, image: '/image/lady.jpg' },
+      { name: 'Sembeans', price: 150.1, image: '/image/sembeans.jpg' },
+      { name: 'Beans', price: 100.1, image: '/image/beans.jpg' },
+      { name: 'Beatroot', price: 70.1, image: '/image/beatroot.jpg' },
+      { name: 'Cabbage', price: 90.1, image: '/image/cabbage.jpg' },
+      { name: 'Greenchilli', price: 80.1, image: '/image/greechill.jpg' },
+      { name: 'Sweetcorn', price: 150.1, image: '/image/sweetcorn.jpg' },
+      { name: 'Garlic', price: 100.1, image: '/image/garlic.jpg' },
+      { name: 'Spinach', price: 70.1, image: '/image/spinach.jpg' },
+      { name: 'Coriander', price: 80.1, image: '/image/coriander.jpg' },
     ],
     nonveg: [
       { name: 'Chicken', price: 800.0, image: '/image/chicken.jpg' },
       { name: 'Mutton', price: 950.0, image: '/image/mutton.jpg' },
+      { name: 'Muttonboti', price: 900.0, image: '/image/muttonboti.jpg' },
+      { name: 'Rabbit', price: 456.0, image: '/image/rabbit.jpg' },
       { name: 'Fish', price: 700.0, image: '/image/fish.jpg' },
+      { name: 'Eggs', price: 120.0, image: '/image/eggs.jpg' },
       { name: 'Beef', price: 900.0, image: '/image/beef.jpg' },
       { name: 'Pork', price: 850.0, image: '/image/Pork.jpg' },
       { name: 'Crab', price: 950.0, image: '/image/Crab.jpg' },
       { name: 'Goat (Chevon)', price: 187.0, image: '/image/goat.jpg' },
-      { name: 'Rabbit', price: 456.0, image: '/image/rabbit.jpg' },
-      { name: 'Eggs', price: 120.0, image: '/image/eggs.jpg' },
       { name: 'Prawns', price: 200.0, image: '/image/prawns.jpg' },
-      { name: 'Muttonboti', price: 900.0, image: '/image/muttonboti.jpg' },
       { name: 'Goatpaya', price: 800.0, image: '/image/goatpaya.jpg' },
       { name: 'Chickenkeema', price: 700.0, image: '/image/chickenkeema.jpg' },
       { name: 'Muttonkeema', price: 1000.0, image: '/image/muttonkemma.jpg' },
@@ -94,60 +95,45 @@ const productsSlice = createSlice({
       { name: 'Blueberrychocolate', price: 205.0, image: '/image/blue.jpg' },
       { name: 'Blackberrychocolate', price: 135.0, image: '/image/black.jpg' },
     ],
+  },
+  reducers: {}
+});
 
-    
-    
-    },
-    reducers: {}
-  });
-  //add to cart
-  const cartSlice=createSlice({
-    name:'cart',
-    initialState:localStoragecart,
-    reducers:{
-      Addtocart:(state,action)=>{
-        const item=state.find(i=>i.name===action.payload.name);
-        if(item){
-          item.quantity+=1;
-        }else{
-          state.push({...action.payload,quantity:1});
-        }
-      },
-         // Increment item quantity
-    incrementQuantity: (state, action) => {
-      const item = state.find(i => i.name === action.payload);
+// Cart slice
+const cartSlice = createSlice({
+  name: 'cart',
+  initialState: localStoragecart,
+  reducers: {
+    Addtocart: (state, action) => {
+      const item = state.find(i => i.name === action.payload.name);
       if (item) {
         item.quantity += 1;
+      } else {
+        state.push({ ...action.payload, quantity: 1 });
       }
     },
-    
-    // Decrement item quantity
+    incrementQuantity: (state, action) => {
+      const item = state.find(i => i.name === action.payload);
+      if (item) item.quantity += 1;
+    },
     decrementQuantity: (state, action) => {
       const item = state.find(i => i.name === action.payload);
       if (item && item.quantity > 1) {
         item.quantity -= 1;
       } else if (item && item.quantity === 1) {
-        // If quantity is 1, remove the item from the cart
         return state.filter(i => i.name !== action.payload);
       }
     },
-    
-    // Remove item from cart entirely
-    removeItem: (state, action) =>
-      {
-        return state.filter(i => i.name !== action.payload);
-      },
-     clearCart: () => [],
+    removeItem: (state, action) => state.filter(i => i.name !== action.payload),
+    clearCart: () => [],
     IncrementQuantity: (state, action) => {
       const item = state.find(item => item.id === action.payload.id);
-      if (item) {
-        item.quantity += 1; 
-      }
+      if (item) item.quantity += 1;
     },
-
-    
   }
 });
+
+// Orders slice
 const orderSlice = createSlice({
   name: 'orders',
   initialState: [],
@@ -158,28 +144,44 @@ const orderSlice = createSlice({
   }
 });
 
-
-          const store =configureStore({
-            reducer:{
-              products:productsSlice.reducer,
-              cart:cartSlice.reducer,
-               orders:orderSlice.reducer,
-            }
-          });
-store.subscribe(()=>{
-  const state=store.getState();
-  localStorage.setItem("cart",JSON.stringify(state.cart));
-
+// ✅ Auth slice (newly added)
+const authSlice = createSlice({
+  name: 'auth',
+  initialState: {
+    isAuthenticated: false,
+    user: null,
+  },
+  reducers: {
+    loginUser: (state, action) => {
+      state.isAuthenticated = true;
+      state.user = action.payload;
+    },
+    logoutUser: (state) => {
+      state.isAuthenticated = false;
+      state.user = null;
+    }
+  }
 });
-         
 
+// Configure the store
+const store = configureStore({
+  reducer: {
+    products: productsSlice.reducer,
+    cart: cartSlice.reducer,
+    orders: orderSlice.reducer,
+    auth: authSlice.reducer, // ✅ added
+  }
+});
 
-
+// Persist cart to localStorage
+store.subscribe(() => {
+  const state = store.getState();
+  localStorage.setItem("cart", JSON.stringify(state.cart));
+});
 
 // Export actions
 export const { addOrder } = orderSlice.actions;
-        export const{Addtocart,incrementQuantity,decrementQuantity,removeItem,clearCart}=cartSlice.actions;
-      
-    
-        
-  export default store;
+export const { Addtocart, incrementQuantity, decrementQuantity, removeItem, clearCart, IncrementQuantity } = cartSlice.actions;
+export const { loginUser, logoutUser } = authSlice.actions; // ✅ added
+
+export default store;
